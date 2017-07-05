@@ -258,7 +258,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/izumi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -372,12 +372,138 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/QCA6174Driver_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/QCA6174Driver_installation/" itemprop="url">Install driver for QCA6174 Wi-Fi Driver</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>I have an Asus Strix X99 Gaming motherboard but the wifi module doesn’t work well. In fact, there are some problems with the given driver in the system, so I need to install a correct one instead.  </p>
+<ul>
+<li>Download QCA6174.zip in this repo.</li>
+<li>Replace the folder /lib/firmware/ath10k/QCA6174 with the correct one.</li>
+<li>Give every .bin file authority.</li>
+<li><p>Reload the wifi driver by using </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rmmod ath10k_pci</div><div class="line">sudo modprobe -v ath10k_pci</div></pre></td></tr></table></figure>
+</li>
+<li><p>Finally, reboot your computer</p>
+</li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://tieba.baidu.com/p/4432452892?pid=86241326901&amp;cid=0#86241326901" target="_blank" rel="external">http://tieba.baidu.com/p/4432452892?pid=86241326901&amp;cid=0#86241326901</a></p>
+<blockquote>
+<p>592g网卡是QCA6174，ubuntu带的驱动有问题。<br>下载这个文件 <a href="http://pan.baidu.com/s/1c1H5Hz6" target="_blank" rel="external">http://pan.baidu.com/s/1c1H5Hz6</a> 提取码：dsp5。<br>解压出来的QCA6174文件夹在root权限下放在/lib/firmware/ath10k/文件夹里，bin文件权限改成755。然后重载驱动，重启<br>给bin文件加上x属性 命令是sudo chmod 755 *.bin 用以下两个命令重载网卡驱动： sudo rmmod ath10k_pci sudo modprobe -v ath10k_pci 重启  </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/blog_on_github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/izumi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -501,138 +627,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/QCA6174Driver_installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Izumi's Notepad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/QCA6174Driver_installation/" itemprop="url">Install driver for QCA6174 Wi-Fi Driver</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>I have an Asus Strix X99 Gaming motherboard but the wifi module doesn’t work well. In fact, there are some problems with the given driver in the system, so I need to install a correct one instead.  </p>
-<ul>
-<li>Download QCA6174.zip in this repo.</li>
-<li>Replace the folder /lib/firmware/ath10k/QCA6174 with the correct one.</li>
-<li>Give every .bin file authority.</li>
-<li><p>Reload the wifi driver by using </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rmmod ath10k_pci</div><div class="line">sudo modprobe -v ath10k_pci</div></pre></td></tr></table></figure>
-</li>
-<li><p>Finally, reboot your computer</p>
-</li>
-</ul>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://tieba.baidu.com/p/4432452892?pid=86241326901&amp;cid=0#86241326901" target="_blank" rel="external">http://tieba.baidu.com/p/4432452892?pid=86241326901&amp;cid=0#86241326901</a></p>
-<blockquote>
-<p>592g网卡是QCA6174，ubuntu带的驱动有问题。<br>下载这个文件 <a href="http://pan.baidu.com/s/1c1H5Hz6" target="_blank" rel="external">http://pan.baidu.com/s/1c1H5Hz6</a> 提取码：dsp5。<br>解压出来的QCA6174文件夹在root权限下放在/lib/firmware/ath10k/文件夹里，bin文件权限改成755。然后重载驱动，重启<br>给bin文件加上x属性 命令是sudo chmod 755 *.bin 用以下两个命令重载网卡驱动： sudo rmmod ath10k_pci sudo modprobe -v ath10k_pci 重启  </p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/cartographer_installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/izumi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -744,12 +744,135 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/solve_cannot_find_libs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/solve_cannot_find_libs/" itemprop="url">Solve "cannot open shared object file xxx"</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
+<p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
+<p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
+<p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
+<p>搞定。再运行程序时，就可以找到这个.so了。  </p>
+<p>如果不知道在那里找.so文件，可以使用find指令，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /usr/ -name libg2o_core.so -print</div></pre></td></tr></table></figure></p>
+<p>如果该文件在/usr下，则会显示出其路径位置。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f" target="_blank" rel="external">http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f</a>  </li>
+<li><a href="http://www.cnblogs.com/Anker/p/3209876.html" target="_blank" rel="external">http://www.cnblogs.com/Anker/p/3209876.html</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ss_proxychain_vs_GFW/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/izumi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -871,135 +994,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/solve_cannot_find_libs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Izumi's Notepad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/solve_cannot_find_libs/" itemprop="url">Solve "cannot open shared object file xxx"</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
-<p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
-<p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
-<p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
-<p>搞定。再运行程序时，就可以找到这个.so了。  </p>
-<p>如果不知道在那里找.so文件，可以使用find指令，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /usr/ -name libg2o_core.so -print</div></pre></td></tr></table></figure></p>
-<p>如果该文件在/usr下，则会显示出其路径位置。</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li><a href="http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f" target="_blank" rel="external">http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f</a>  </li>
-<li><a href="http://www.cnblogs.com/Anker/p/3209876.html" target="_blank" rel="external">http://www.cnblogs.com/Anker/p/3209876.html</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/izumi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1136,7 +1136,7 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/izumi.jpg"
                alt="Zhang Lu" />
           <p class="site-author-name" itemprop="name">Zhang Lu</p>
            
