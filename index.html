@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next muse use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -95,7 +95,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Izumi&#39;s Notepad">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://masterizumi.github.io/index.html">
 <meta property="og:site_name" content="Izumi&#39;s Notepad">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Izumi&#39;s Notepad">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="https://masterizumi.github.io/"/>
 
 
 
@@ -150,7 +150,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
   
@@ -200,7 +200,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
           </a>
         </li>
       
@@ -210,7 +220,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -253,10 +263,10 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/Notations_for_installing_opencv3_1_0/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/Notations_for_installing_opencv3_1_0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="name" content="Izumi">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/izumi.jpg">
     </span>
@@ -282,7 +292,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
@@ -372,10 +382,10 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/QCA6174Driver_installation/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/QCA6174Driver_installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="name" content="Izumi">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/izumi.jpg">
     </span>
@@ -401,7 +411,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
@@ -498,10 +508,254 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/blog_on_github/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/cartographer_installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="name" content="Izumi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/cartographer_installation/" itemprop="url">Cartographer Installation</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-compiler python-sphinx  ros-indigo-tf2-eigen libatlas-base-dev libsuitesparse-dev liblapack-dev</div></pre></td></tr></table></figure>
+<h1 id="Ceres-solver"><a href="#Ceres-solver" class="headerlink" title="Ceres solver"></a>Ceres solver</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/ceres-solver-1.11.0.git  </div><div class="line">cd ceres-solver-1.11.0/build  </div><div class="line">cmake ..  </div><div class="line">make –j  </div><div class="line">sudo make install</div></pre></td></tr></table></figure>
+<h1 id="Cartographer"><a href="#Cartographer" class="headerlink" title="Cartographer"></a>Cartographer</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/cartographer.git  </div><div class="line">cd cartographer/build  </div><div class="line">cmake .. -G Ninja  </div><div class="line">ninja  </div><div class="line">ninja test  </div><div class="line">sudo ninja install</div></pre></td></tr></table></figure>
+<h1 id="cartographer-ros"><a href="#cartographer-ros" class="headerlink" title="cartographer_ros"></a>cartographer_ros</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~/catkin_ws/src  </div><div class="line">git clone https://github.com/hitcm/cartographer_ros.git  </div><div class="line">cd ..  </div><div class="line">catkin_make</div></pre></td></tr></table></figure>
+<h1 id="Run"><a href="#Run" class="headerlink" title="Run!"></a>Run!</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=$&#123;HOME&#125;/Downloads/cartographer_paper_deutsches_museum.bag  </div><div class="line">roslaunch cartographer_ros demo_backpack_3d.launch bag_filename:=$&#123;HOME&#125;/Downloads/cartographer_3d_deutsches_museum.bag</div></pre></td></tr></table></figure>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://www.cnblogs.com/hitcm/p/5939507.html" target="_blank" rel="external">http://www.cnblogs.com/hitcm/p/5939507.html</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/ss_proxychain_vs_GFW/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Izumi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/ss_proxychain_vs_GFW/" itemprop="url">使用ss+proxychains翻越GFW</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>× 环境Ubuntu 14.04LTS</p>
+<h1 id="安装shadowsocks-qt5"><a href="#安装shadowsocks-qt5" class="headerlink" title="安装shadowsocks-qt5"></a>安装shadowsocks-qt5</h1><p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5  </p>
+<h1 id="打开gui配置ss，使用购买的ss服务器"><a href="#打开gui配置ss，使用购买的ss服务器" class="headerlink" title="打开gui配置ss，使用购买的ss服务器"></a>打开gui配置ss，使用购买的ss服务器</h1><h1 id="配置计算机"><a href="#配置计算机" class="headerlink" title="配置计算机"></a>配置计算机</h1><p>设置-网络-代理<br>手动        127.0.0.1    1080  //这里的1080是ss服务器的本地端口  </p>
+<p>此时，浏览器就可以正常跨越GFW了，但是终端是没法翻的,貌似是因为终端不走socks？终端不翻的话apt-get update根本没法正常更新啊。。  </p>
+<p>或者，使用火狐的foxyproxy插件对代理进行配置，以实现较为方便的切换。</p>
+<h1 id="安装proxychains"><a href="#安装proxychains" class="headerlink" title="安装proxychains"></a>安装proxychains</h1><p>sudo apt-get install proxychains  </p>
+<h1 id="配置proxychains"><a href="#配置proxychains" class="headerlink" title="配置proxychains"></a>配置proxychains</h1><p>sudo vim /etc/proxychains.conf<br>将最后一行的 socks4 xxxx<br>改成 socks5 127.0.0.1 1080  //这里的信息也是ss服务器的本地端口  </p>
+<h1 id="重新打开终端，需要走代理时就加上proxychains命令，例如"><a href="#重新打开终端，需要走代理时就加上proxychains命令，例如" class="headerlink" title="重新打开终端，需要走代理时就加上proxychains命令，例如"></a>重新打开终端，需要走代理时就加上proxychains命令，例如</h1><p>sudo proxychains apt-get update<br>此处可以使用 proxychains curl ip.gs查看本机地址，正常的话应该在境外。<br>也可使用proxychains curl google.com看网络是否连通。  </p>
+<ul>
+<li><p>若提示<br>ERROR: ld.so: object ‘libproxychains.so.3’ from LD_PRELOAD cannot be preloaded: ignored.<br>说明proxychains找不到对应的配置文件，修改路径即可。<br>在终端里使用find命令<br>find /usr/lib/ -name libproxychains.so.3 -print<br>会打印出libproxychains.so.3的路径<br>然后 sudo vim /usr/bin/proxychains<br>修改里面的LD_PRELOAD参数为上面打印出来的路径即可。  </p>
+</li>
+<li><p>可能在5,6步中间需要重启一下系统。  </p>
+</li>
+<li><p>由于没有配置PAC模式，所以跨越GFW时，需要先打开ss，然后修改系统网络代理。不需要代理时，需要改回原来的配置。（摊手  </p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/blog_on_github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Izumi">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/izumi.jpg">
     </span>
@@ -527,7 +781,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
@@ -627,127 +881,10 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/cartographer_installation/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/solve_cannot_find_libs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/izumi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Izumi's Notepad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/cartographer_installation/" itemprop="url">Cartographer Installation</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-compiler python-sphinx  ros-indigo-tf2-eigen libatlas-base-dev libsuitesparse-dev liblapack-dev</div></pre></td></tr></table></figure>
-<h1 id="Ceres-solver"><a href="#Ceres-solver" class="headerlink" title="Ceres solver"></a>Ceres solver</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/ceres-solver-1.11.0.git  </div><div class="line">cd ceres-solver-1.11.0/build  </div><div class="line">cmake ..  </div><div class="line">make –j  </div><div class="line">sudo make install</div></pre></td></tr></table></figure>
-<h1 id="Cartographer"><a href="#Cartographer" class="headerlink" title="Cartographer"></a>Cartographer</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/cartographer.git  </div><div class="line">cd cartographer/build  </div><div class="line">cmake .. -G Ninja  </div><div class="line">ninja  </div><div class="line">ninja test  </div><div class="line">sudo ninja install</div></pre></td></tr></table></figure>
-<h1 id="cartographer-ros"><a href="#cartographer-ros" class="headerlink" title="cartographer_ros"></a>cartographer_ros</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~/catkin_ws/src  </div><div class="line">git clone https://github.com/hitcm/cartographer_ros.git  </div><div class="line">cd ..  </div><div class="line">catkin_make</div></pre></td></tr></table></figure>
-<h1 id="Run"><a href="#Run" class="headerlink" title="Run!"></a>Run!</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=$&#123;HOME&#125;/Downloads/cartographer_paper_deutsches_museum.bag  </div><div class="line">roslaunch cartographer_ros demo_backpack_3d.launch bag_filename:=$&#123;HOME&#125;/Downloads/cartographer_3d_deutsches_museum.bag</div></pre></td></tr></table></figure>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://www.cnblogs.com/hitcm/p/5939507.html" target="_blank" rel="external">http://www.cnblogs.com/hitcm/p/5939507.html</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/solve_cannot_find_libs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="name" content="Izumi">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/izumi.jpg">
     </span>
@@ -773,7 +910,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
@@ -867,137 +1004,10 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ss_proxychain_vs_GFW/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/izumi.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Izumi's Notepad">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/05/ss_proxychain_vs_GFW/" itemprop="url">使用ss+proxychains翻越GFW</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
-                2017-07-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>× 环境Ubuntu 14.04LTS</p>
-<h1 id="安装shadowsocks-qt5"><a href="#安装shadowsocks-qt5" class="headerlink" title="安装shadowsocks-qt5"></a>安装shadowsocks-qt5</h1><p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5  </p>
-<h1 id="打开gui配置ss，使用购买的ss服务器"><a href="#打开gui配置ss，使用购买的ss服务器" class="headerlink" title="打开gui配置ss，使用购买的ss服务器"></a>打开gui配置ss，使用购买的ss服务器</h1><h1 id="配置计算机"><a href="#配置计算机" class="headerlink" title="配置计算机"></a>配置计算机</h1><p>设置-网络-代理<br>手动        127.0.0.1    1080  //这里的1080是ss服务器的本地端口  </p>
-<p>此时，浏览器就可以正常跨越GFW了，但是终端是没法翻的,貌似是因为终端不走socks？终端不翻的话apt-get update根本没法正常更新啊。。  </p>
-<p>或者，使用火狐的foxyproxy插件对代理进行配置，以实现较为方便的切换。</p>
-<h1 id="安装proxychains"><a href="#安装proxychains" class="headerlink" title="安装proxychains"></a>安装proxychains</h1><p>sudo apt-get install proxychains  </p>
-<h1 id="配置proxychains"><a href="#配置proxychains" class="headerlink" title="配置proxychains"></a>配置proxychains</h1><p>sudo vim /etc/proxychains.conf<br>将最后一行的 socks4 xxxx<br>改成 socks5 127.0.0.1 1080  //这里的信息也是ss服务器的本地端口  </p>
-<h1 id="重新打开终端，需要走代理时就加上proxychains命令，例如"><a href="#重新打开终端，需要走代理时就加上proxychains命令，例如" class="headerlink" title="重新打开终端，需要走代理时就加上proxychains命令，例如"></a>重新打开终端，需要走代理时就加上proxychains命令，例如</h1><p>sudo proxychains apt-get update<br>此处可以使用 proxychains curl ip.gs查看本机地址，正常的话应该在境外。<br>也可使用proxychains curl google.com看网络是否连通。  </p>
-<ul>
-<li><p>若提示<br>ERROR: ld.so: object ‘libproxychains.so.3’ from LD_PRELOAD cannot be preloaded: ignored.<br>说明proxychains找不到对应的配置文件，修改路径即可。<br>在终端里使用find命令<br>find /usr/lib/ -name libproxychains.so.3 -print<br>会打印出libproxychains.so.3的路径<br>然后 sudo vim /usr/bin/proxychains<br>修改里面的LD_PRELOAD参数为上面打印出来的路径即可。  </p>
-</li>
-<li><p>可能在5,6步中间需要重启一下系统。  </p>
-</li>
-<li><p>由于没有配置PAC模式，所以跨越GFW时，需要先打开ss，然后修改系统网络代理。不需要代理时，需要改回原来的配置。（摊手  </p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="name" content="Izumi">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/izumi.jpg">
     </span>
@@ -1023,7 +1033,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
@@ -1137,8 +1147,8 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/izumi.jpg"
-               alt="Zhang Lu" />
-          <p class="site-author-name" itemprop="name">Zhang Lu</p>
+               alt="Izumi" />
+          <p class="site-author-name" itemprop="name">Izumi</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
           
@@ -1149,7 +1159,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -1198,12 +1208,12 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Zhang Lu</span>
+  <span class="author" itemprop="copyrightHolder">Izumi</span>
 </div>
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
