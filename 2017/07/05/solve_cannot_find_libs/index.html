@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="Solve “cannot open shared object file…”问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core">
+<meta name="description" content="问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Izumi&#39;s Notepad">
+<meta property="og:title" content="Solve &quot;cannot open shared object file xxx&quot;">
 <meta property="og:url" content="http://yoursite.com/2017/07/05/solve_cannot_find_libs/index.html">
 <meta property="og:site_name" content="Izumi&#39;s Notepad">
-<meta property="og:description" content="Solve “cannot open shared object file…”问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core">
-<meta property="og:updated_time" content="2017-07-05T13:26:23.316Z">
+<meta property="og:description" content="问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib">
+<meta property="og:updated_time" content="2017-07-05T13:36:56.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Izumi&#39;s Notepad">
-<meta name="twitter:description" content="Solve “cannot open shared object file…”问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core">
+<meta name="twitter:title" content="Solve &quot;cannot open shared object file xxx&quot;">
+<meta name="twitter:description" content="问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title> | Izumi's Notepad</title>
+  <title>Solve "cannot open shared object file xxx" | Izumi's Notepad</title>
   
 
 
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">Solve "cannot open shared object file xxx"</h1>
         
 
         <div class="post-meta">
@@ -282,9 +282,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:26:26+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
                 2017-07-05
               </time>
             
@@ -319,15 +319,15 @@
       
 
       
-        <h1 id="Solve-“cannot-open-shared-object-file…”"><a href="#Solve-“cannot-open-shared-object-file…”" class="headerlink" title="Solve “cannot open shared object file…”"></a>Solve “cannot open shared object file…”</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
 <p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
-<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
 <p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
 <p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
 <p>搞定。再运行程序时，就可以找到这个.so了。  </p>
 <p>如果不知道在那里找.so文件，可以使用find指令，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /usr/ -name libg2o_core.so -print</div></pre></td></tr></table></figure></p>
 <p>如果该文件在/usr下，则会显示出其路径位置。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
 <li><a href="http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f" target="_blank" rel="external">http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f</a>  </li>
 <li><a href="http://www.cnblogs.com/Anker/p/3209876.html" target="_blank" rel="external">http://www.cnblogs.com/Anker/p/3209876.html</a></li>
 </ul>
@@ -367,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/05/ss_proxychain_vs_GFW/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" rel="next" title="解决NVIDIA显卡驱动安装后登录循环">
+                <i class="fa fa-chevron-left"></i> 解决NVIDIA显卡驱动安装后登录循环
               </a>
             
           </div>
@@ -377,8 +377,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/05/QCA6174Driver_installation/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/05/cartographer_installation/" rel="prev" title="Cartographer Installation">
+                Cartographer Installation <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -428,10 +428,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -452,7 +452,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -490,7 +490,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Solve-“cannot-open-shared-object-file…”"><span class="nav-number">1.</span> <span class="nav-text">Solve “cannot open shared object file…”</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.2.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.3.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
@@ -522,7 +522,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
