@@ -253,7 +253,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
@@ -272,7 +272,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/05/test/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -284,7 +284,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:21:11+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:27:18+08:00">
                 2017-07-05
               </time>
             
@@ -321,7 +321,14 @@
       
         
           
-            
+            <h1 id="解决NVIDIA显卡驱动安装后登录循环"><a href="#解决NVIDIA显卡驱动安装后登录循环" class="headerlink" title="解决NVIDIA显卡驱动安装后登录循环"></a>解决NVIDIA显卡驱动安装后登录循环</h1><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>Ubuntu 14.04 LTS<br>Dell Omen 2， i7-6700HQ，  GTX960M  </p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul>
+<li>ctrl+alt+1  </li>
+<li>sudo service lightdm stop  </li>
+<li>sudo apt-get purge nvidia*  </li>
+<li>sudo apt-get install nvidia-367  </li>
+</ul>
+
           
         
       
@@ -364,7 +371,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/Notations_for_installing_opencv3_1_0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhang Lu">
@@ -383,7 +390,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/05/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/07/05/Notations_for_installing_opencv3_1_0/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -395,7 +402,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T12:23:43+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:27:01+08:00">
                 2017-07-05
               </time>
             
@@ -432,15 +439,636 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="Notations-for-installing-OpenCV-3-1-0"><a href="#Notations-for-installing-OpenCV-3-1-0" class="headerlink" title="Notations for installing OpenCV 3.1.0"></a>Notations for installing OpenCV 3.1.0</h1><h2 id="Installing-Dependencies"><a href="#Installing-Dependencies" class="headerlink" title="Installing Dependencies"></a>Installing Dependencies</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[compiler] sudo apt-get install build-essential  </div><div class="line">[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  </div><div class="line">[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</div></pre></td></tr></table></figure>
+<h2 id="Getting-Source-Code"><a href="#Getting-Source-Code" class="headerlink" title="Getting Source Code"></a>Getting Source Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~/&lt;my_working_directory&gt;  </div><div class="line">git clone https://github.com/Itseez/opencv.git  </div><div class="line">git clone https://github.com/Itseez/opencv_contrib.git</div></pre></td></tr></table></figure>
+<p>Then, checkout to version 3.1.0.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 3.1.0</div></pre></td></tr></table></figure>
+<p>Both opencv and opencv_contrib must <strong>be synchronized</strong>.</p>
+<h2 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h2><p>Using the following command to build with modules from opencv_contrib and avoid some bugs.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/Toolsets/opencv_contrib/modules -D WITH_LIBV4L=ON -D WITH_V4L=OFF -D BUILD_EXAMPLES=ON ..</div></pre></td></tr></table></figure></p>
+<h2 id="Epilogue"><a href="#Epilogue" class="headerlink" title="Epilogue"></a>Epilogue</h2><p>There are many errors when I was building OpenCV 3.1.0. It seems that all the errors are from opencv_contrib. You can search these errors in google, and nearly all of them are issued in github. Thus, you can lookup the issues and find the changes of the code in corresponding commits.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/QCA6174Driver_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/QCA6174Driver_installation/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:26:34+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Install-driver-for-QCA6174-Wi-Fi-Driver"><a href="#Install-driver-for-QCA6174-Wi-Fi-Driver" class="headerlink" title="Install driver for QCA6174 Wi-Fi Driver"></a>Install driver for QCA6174 Wi-Fi Driver</h1><p>I have an Asus Strix X99 Gaming motherboard but the wifi module doesn’t work well. In fact, there are some problems with the given driver in the system, so I need to install a correct one instead.  </p>
+<ul>
+<li>Download QCA6174.zip in this repo.</li>
+<li>Replace the folder /lib/firmware/ath10k/QCA6174 with the correct one.</li>
+<li>Give every .bin file authority.</li>
+<li><p>Reload the wifi driver by using </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo rmmod ath10k_pci</div><div class="line">sudo modprobe -v ath10k_pci</div></pre></td></tr></table></figure>
+</li>
+<li><p>Finally, reboot your computer</p>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://tieba.baidu.com/p/4432452892?pid=86241326901&amp;cid=0#86241326901" target="_blank" rel="external"></a></p>
+<blockquote>
+<p>592g网卡是QCA6174，ubuntu带的驱动有问题。<br>下载这个文件 <a href="http://pan.baidu.com/s/1c1H5Hz6" target="_blank" rel="external">http://pan.baidu.com/s/1c1H5Hz6</a> 提取码：dsp5。<br>解压出来的QCA6174文件夹在root权限下放在/lib/firmware/ath10k/文件夹里，bin文件权限改成755。然后重载驱动，重启<br>给bin文件加上x属性 命令是sudo chmod 755 *.bin 用以下两个命令重载网卡驱动： sudo rmmod ath10k_pci sudo modprobe -v ath10k_pci 重启  </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/solve_cannot_find_libs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/solve_cannot_find_libs/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:26:26+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Solve-“cannot-open-shared-object-file…”"><a href="#Solve-“cannot-open-shared-object-file…”" class="headerlink" title="Solve “cannot open shared object file…”"></a>Solve “cannot open shared object file…”</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
+<p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
+<p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
+<p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
+<p>搞定。再运行程序时，就可以找到这个.so了。  </p>
+<p>如果不知道在那里找.so文件，可以使用find指令，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /usr/ -name libg2o_core.so -print</div></pre></td></tr></table></figure></p>
+<p>如果该文件在/usr下，则会显示出其路径位置。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f" target="_blank" rel="external">http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f</a>  </li>
+<li><a href="http://www.cnblogs.com/Anker/p/3209876.html" target="_blank" rel="external">http://www.cnblogs.com/Anker/p/3209876.html</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/ss_proxychain_vs_GFW/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/ss_proxychain_vs_GFW/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:26:10+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="环境Ubuntu-14-04LTS"><a href="#环境Ubuntu-14-04LTS" class="headerlink" title="环境Ubuntu 14.04LTS"></a>环境Ubuntu 14.04LTS</h1><h2 id="1-安装shadowsocks-qt5"><a href="#1-安装shadowsocks-qt5" class="headerlink" title="1 安装shadowsocks-qt5"></a>1 安装shadowsocks-qt5</h2><p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5  </p>
+<h2 id="2-打开gui配置ss，使用购买的ss服务器"><a href="#2-打开gui配置ss，使用购买的ss服务器" class="headerlink" title="2 打开gui配置ss，使用购买的ss服务器"></a>2 打开gui配置ss，使用购买的ss服务器</h2><h2 id="3-配置计算机"><a href="#3-配置计算机" class="headerlink" title="3 配置计算机"></a>3 配置计算机</h2><p>设置-网络-代理<br>手动        127.0.0.1    1080  //这里的1080是ss服务器的本地端口  </p>
+<p>此时，浏览器就可以正常跨越GFW了，但是终端是没法翻的,貌似是因为终端不走socks？终端不翻的话apt-get update根本没法正常更新啊。。  </p>
+<p>或者，使用火狐的foxyproxy插件对代理进行配置，以实现较为方便的切换。</p>
+<h2 id="4-安装proxychains"><a href="#4-安装proxychains" class="headerlink" title="4 安装proxychains"></a>4 安装proxychains</h2><p>sudo apt-get install proxychains  </p>
+<h2 id="5-配置proxychains"><a href="#5-配置proxychains" class="headerlink" title="5 配置proxychains"></a>5 配置proxychains</h2><p>sudo vim /etc/proxychains.conf<br>将最后一行的 socks4 xxxx<br>改成 socks5 127.0.0.1 1080  //这里的信息也是ss服务器的本地端口  </p>
+<h2 id="6-重新打开终端，需要走代理时就加上proxychains命令，例如"><a href="#6-重新打开终端，需要走代理时就加上proxychains命令，例如" class="headerlink" title="6 重新打开终端，需要走代理时就加上proxychains命令，例如"></a>6 重新打开终端，需要走代理时就加上proxychains命令，例如</h2><p>sudo proxychains apt-get update<br>此处可以使用 proxychains curl ip.gs查看本机地址，正常的话应该在境外。<br>也可使用proxychains curl google.com看网络是否连通。  </p>
+<ul>
+<li><p>若提示<br>ERROR: ld.so: object ‘libproxychains.so.3’ from LD_PRELOAD cannot be preloaded: ignored.<br>说明proxychains找不到对应的配置文件，修改路径即可。<br>在终端里使用find命令<br>find /usr/lib/ -name libproxychains.so.3 -print<br>会打印出libproxychains.so.3的路径<br>然后 sudo vim /usr/bin/proxychains<br>修改里面的LD_PRELOAD参数为上面打印出来的路径即可。  </p>
+</li>
+<li><p>可能在5,6步中间需要重启一下系统。  </p>
+</li>
+<li><p>由于没有配置PAC模式，所以跨越GFW时，需要先打开ss，然后修改系统网络代理。不需要代理时，需要改回原来的配置。（摊手  </p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/blog_on_github/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/blog_on_github/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:25:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Create-your-own-webpage-on-GitHub"><a href="#Create-your-own-webpage-on-GitHub" class="headerlink" title="Create your own webpage on GitHub"></a>Create your own webpage on GitHub</h1><p>This is a tutorial of creating a blog on github.io using Hexo.  </p>
+<ul>
+<li>Environment: Ubuntu 14.04  </li>
+</ul>
+<h2 id="Install-Nodejs"><a href="#Install-Nodejs" class="headerlink" title="Install Nodejs"></a>Install Nodejs</h2><p>Nodejs is a js framework, we can install it by apt-get.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs  </div><div class="line">sudo apt-get install nodejs-legacy  </div><div class="line">sudo apt-get install npm</div></pre></td></tr></table></figure>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><p>Build a folder for blog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir blog</div></pre></td></tr></table></figure></p>
+<p>Initialize hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init ~/blog</div></pre></td></tr></table></figure></p>
+<p>Commands<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g    # generate webpage</div><div class="line">hexo s    # run local server</div></pre></td></tr></table></figure></p>
+<p>You can test your local server by opening <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>.</p>
+<h3 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h3><p>Let’s try <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
+<p>Change the theme option to next in _config.yml, and update it by:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git pull</div><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<h2 id="Deploy-the-webpage-on-GitHub"><a href="#Deploy-the-webpage-on-GitHub" class="headerlink" title="Deploy the webpage on GitHub"></a>Deploy the webpage on GitHub</h2><p>Login your GitHub and create a new repository, the name should be “yourname.github.io”.  </p>
+<p>Install deployer:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-get --save</div></pre></td></tr></table></figure></p>
+<p>Edit _config.yml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>Finally, you can deploy your webpage:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">http://www.jianshu.com/p/e99ed60390a8</a><br><a href="http://www.jianshu.com/p/a0a27d840992" target="_blank" rel="external">http://www.jianshu.com/p/a0a27d840992</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/05/cartographer_installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhang Lu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/cartographer_installation/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:25:48+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#Cartographer Installation</p>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p>sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-compiler python-sphinx  ros-indigo-tf2-eigen libatlas-base-dev libsuitesparse-dev liblapack-dev</p>
+<h2 id="Ceres-solver"><a href="#Ceres-solver" class="headerlink" title="Ceres solver"></a>Ceres solver</h2><p>git clone <a href="https://github.com/hitcm/ceres-solver-1.11.0.git" target="_blank" rel="external">https://github.com/hitcm/ceres-solver-1.11.0.git</a><br>cd ceres-solver-1.11.0/build<br>cmake ..<br>make –j<br>sudo make install  </p>
+<h2 id="Cartographer"><a href="#Cartographer" class="headerlink" title="Cartographer"></a>Cartographer</h2><p>git clone <a href="https://github.com/hitcm/cartographer.git" target="_blank" rel="external">https://github.com/hitcm/cartographer.git</a><br>cd cartographer/build<br>cmake .. -G Ninja<br>ninja<br>ninja test<br>sudo ninja install  </p>
+<h2 id="cartographer-ros"><a href="#cartographer-ros" class="headerlink" title="cartographer_ros"></a>cartographer_ros</h2><p>cd ~/catkin_ws/src<br>git clone <a href="https://github.com/hitcm/cartographer_ros.git" target="_blank" rel="external">https://github.com/hitcm/cartographer_ros.git</a><br>cd ..<br>catkin_make  </p>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run!"></a>Run!</h2><p>roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag<br>roslaunch cartographer_ros demo_backpack_3d.launch bag_filename:=${HOME}/Downloads/cartographer_3d_deutsches_museum.bag  </p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://www.cnblogs.com/hitcm/p/5939507.html" target="_blank" rel="external">http://www.cnblogs.com/hitcm/p/5939507.html</a></p>
 
           
         
@@ -520,7 +1148,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
