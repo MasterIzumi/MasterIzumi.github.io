@@ -1,0 +1,680 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="0.前言LOAM是一个激光雷达SLAM算法，由Ji Zhang博士等提出并实现。然而Github上的公开Repo，loam_velodyne，原工程仅支持Velodyne VLP-16型多线激光雷达，无法直接使用32线等运行算法。这里我们参考原Repo中的Issue #10对工程进行修改，使其能够支持HDL-32E。 1.安装loam_velodyne直接按照loam_velodyne主页的指示来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改loam_velodyne使其能够兼容HDL-32E">
+<meta property="og:url" content="https://masterizumi.github.io/2017/10/09/loam_velodyne_for_hdl32e/index.html">
+<meta property="og:site_name" content="Izumi&#39;s Notepad">
+<meta property="og:description" content="0.前言LOAM是一个激光雷达SLAM算法，由Ji Zhang博士等提出并实现。然而Github上的公开Repo，loam_velodyne，原工程仅支持Velodyne VLP-16型多线激光雷达，无法直接使用32线等运行算法。这里我们参考原Repo中的Issue #10对工程进行修改，使其能够支持HDL-32E。 1.安装loam_velodyne直接按照loam_velodyne主页的指示来">
+<meta property="og:updated_time" content="2017-10-09T05:08:26.025Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="修改loam_velodyne使其能够兼容HDL-32E">
+<meta name="twitter:description" content="0.前言LOAM是一个激光雷达SLAM算法，由Ji Zhang博士等提出并实现。然而Github上的公开Repo，loam_velodyne，原工程仅支持Velodyne VLP-16型多线激光雷达，无法直接使用32线等运行算法。这里我们参考原Repo中的Issue #10对工程进行修改，使其能够支持HDL-32E。 1.安装loam_velodyne直接按照loam_velodyne主页的指示来">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://masterizumi.github.io/2017/10/09/loam_velodyne_for_hdl32e/"/>
+
+
+
+
+
+  <title>修改loam_velodyne使其能够兼容HDL-32E | Izumi's Notepad</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Izumi's Notepad</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/10/09/loam_velodyne_for_hdl32e/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Izumi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">修改loam_velodyne使其能够兼容HDL-32E</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-09T10:35:53+08:00">
+                2017-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0.前言"></a>0.前言</h1><p>LOAM是一个激光雷达SLAM算法，由<a href="http://www.frc.ri.cmu.edu/~jizhang03/" target="_blank" rel="external">Ji Zhang</a>博士等提出并实现。然而Github上的公开Repo，<a href="https://github.com/laboshinl/loam_velodyne" target="_blank" rel="external">loam_velodyne</a>，原工程仅支持Velodyne VLP-16型多线激光雷达，无法直接使用32线等运行算法。这里我们参考原Repo中的<a href="https://github.com/laboshinl/loam_velodyne/issues/10" target="_blank" rel="external">Issue #10</a>对工程进行修改，使其能够支持HDL-32E。</p>
+<h1 id="1-安装loam-velodyne"><a href="#1-安装loam-velodyne" class="headerlink" title="1.安装loam_velodyne"></a>1.安装loam_velodyne</h1><p>直接按照<a href="https://github.com/laboshinl/loam_velodyne" target="_blank" rel="external">loam_velodyne</a>主页的指示来即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ cd ~/catkin_ws/src/</div><div class="line">$ git clone https://github.com/laboshinl/loam_velodyne.git</div><div class="line">$ cd ~/catkin_ws</div><div class="line">$ catkin_make -DCMAKE_BUILD_TYPE=Release</div></pre></td></tr></table></figure></p>
+<h1 id="2-修改代码"><a href="#2-修改代码" class="headerlink" title="2.修改代码"></a>2.修改代码</h1><h2 id="修改scanRegistration-cpp"><a href="#修改scanRegistration-cpp" class="headerlink" title="修改scanRegistration.cpp"></a>修改<code>scanRegistration.cpp</code></h2><p>首先修改代码，使用点云类型<code>velodyne_pointcloud::PointXYZIR</code>，将每一线激光构造成一个scan，拥有一个<code>scanID</code>:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">std::vector&lt;int&gt; scanStartInd(N_SCANS, 0);</div><div class="line">std::vector&lt;int&gt; scanEndInd(N_SCANS, 0);</div><div class="line">double timeScanCur = laserCloudMsg-&gt;header.stamp.toSec();</div><div class="line">pcl::PointCloud&lt;pcl::PointXYZI&gt; laserCloudIn;</div><div class="line">pcl::PointCloud&lt;velodyne_pointcloud::PointXYZIR&gt; laserCloudIn_vel;</div><div class="line"></div><div class="line">pcl::fromROSMsg(*laserCloudMsg, laserCloudIn);</div><div class="line">pcl::fromROSMsg(*laserCloudMsg, laserCloudIn_vel);</div><div class="line"></div><div class="line">std::vector&lt;int&gt; indices;</div><div class="line">pcl::removeNaNFromPointCloud(laserCloudIn, laserCloudIn, indices);</div><div class="line"></div><div class="line">int cloudSize = laserCloudIn.points.size();</div><div class="line">float startOri = -atan2(laserCloudIn.points[0].y, laserCloudIn.points[0].x);</div><div class="line">float endOri = -atan2(laserCloudIn.points[cloudSize - 1].y,</div><div class="line">                      laserCloudIn.points[cloudSize - 1].x) + 2 * M_PI;</div><div class="line"></div><div class="line">if (endOri - startOri &gt; 3 * M_PI) &#123;</div><div class="line">  endOri -= 2 * M_PI;</div><div class="line">&#125; else if (endOri - startOri &lt; M_PI) &#123;</div><div class="line">  endOri += 2 * M_PI;</div><div class="line">&#125;</div><div class="line">bool halfPassed = false;</div><div class="line">int count = cloudSize;</div><div class="line">PointType point;</div><div class="line">std::vector&lt;pcl::PointCloud&lt;PointType&gt; &gt; laserCloudScans(N_SCANS);</div><div class="line">for (int i = 0; i &lt; cloudSize; i++) &#123;</div><div class="line">  point.x = laserCloudIn.points[i].y;</div><div class="line">  point.y = laserCloudIn.points[i].z;</div><div class="line">  point.z = laserCloudIn.points[i].x;</div><div class="line"></div><div class="line">  int scanID;</div><div class="line"> /* float angle = atan2(point.y,sqrt(point.x * point.x + point.z * point.z)) * 180 / M_PI;</div><div class="line">  int roundedAngle = int(angle + (angle&lt;0.0?-0.5:+0.5)); </div><div class="line">  std::cout &lt;&lt; angle &lt;&lt; std::endl;</div><div class="line">  if (roundedAngle &gt; 0)&#123;</div><div class="line">    scanID = roundedAngle;</div><div class="line">  &#125;</div><div class="line">  else &#123;</div><div class="line">    scanID = roundedAngle + (N_SCANS - 1);</div><div class="line">  &#125;*/</div><div class="line">  scanID = laserCloudIn_vel.points[indices[i]].ring;</div><div class="line">  if (scanID &gt; (N_SCANS - 1) || scanID &lt; 0 )&#123;</div><div class="line">    count--;</div><div class="line">    continue;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>修改数组大小，<a href="http://www.velodynelidar.com/hdl-32e.html" target="_blank" rel="external">HDL-32E</a>一次扫描会产生70000个点，故将数组大小定为100000:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">float cloudCurvature[100000];</div><div class="line">int cloudSortInd[100000];</div><div class="line">int cloudNeighborPicked[100000];</div><div class="line">int cloudLabel[100000];</div></pre></td></tr></table></figure></p>
+<p>修改<code>N_SCANS</code>为32:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">N_SCANS = 32;</div></pre></td></tr></table></figure></p>
+<p>增加<code>velodyne_pointcloud::PointXYZIR</code>所需的头文件:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#include &lt;velodyne_pointcloud/point_types.h&gt; </div><div class="line">#include &lt;velodyne_pointcloud/rawdata.h&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="修改CMakeLists-txt和package-xml"><a href="#修改CMakeLists-txt和package-xml" class="headerlink" title="修改CMakeLists.txt和package.xml"></a>修改<code>CMakeLists.txt</code>和<code>package.xml</code></h2><p>在<code>CMakeLists.txt</code>中:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">find_package(</div><div class="line">...</div><div class="line">velodyne_pointcloud</div><div class="line"></div><div class="line">)</div></pre></td></tr></table></figure></p>
+<p>在<code>package.xml</code>中增加:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;build_depend&gt;velodyne_pointcloud&lt;/build_depend&gt;</div><div class="line">...</div><div class="line">...</div><div class="line">&lt;run_depend&gt;velodyne_pointcloud&lt;/run_depend&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="安装Velodyne驱动"><a href="#安装Velodyne驱动" class="headerlink" title="安装Velodyne驱动"></a>安装Velodyne驱动</h2><p>安装Velodyne的ROS驱动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install ros-indigo-velodyne</div><div class="line">$ cd ~/catkin_ws/src/</div><div class="line">$ git clone https://github.com/ros-drivers/velodyne.git</div><div class="line">$ cd ~/catkin_ws</div><div class="line">$ catkin_make</div></pre></td></tr></table></figure></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/laboshinl/loam_velodyne/issues/10" target="_blank" rel="external">https://github.com/laboshinl/loam_velodyne/issues/10</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/05/Notations_for_installing_opencv3_1_0/" rel="next" title="Notations for installing OpenCV 3.1.0">
+                <i class="fa fa-chevron-left"></i> Notations for installing OpenCV 3.1.0
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/izumi.jpg"
+               alt="Izumi" />
+          <p class="site-author-name" itemprop="name">Izumi</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-前言"><span class="nav-number">1.</span> <span class="nav-text">0.前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装loam-velodyne"><span class="nav-number">2.</span> <span class="nav-text">1.安装loam_velodyne</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-修改代码"><span class="nav-number">3.</span> <span class="nav-text">2.修改代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改scanRegistration-cpp"><span class="nav-number">3.1.</span> <span class="nav-text">修改scanRegistration.cpp</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改CMakeLists-txt和package-xml"><span class="nav-number">3.2.</span> <span class="nav-text">修改CMakeLists.txt和package.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Velodyne驱动"><span class="nav-number">3.3.</span> <span class="nav-text">安装Velodyne驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.4.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Izumi</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
