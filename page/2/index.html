@@ -93,16 +93,12 @@
 
 
 
-<meta name="description" content="× 环境Ubuntu 14.04LTS 安装shadowsocks-qt5sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5   打开gui配置ss，使用购买的ss服务器配置计算机设置-网络-代理手动        127.0.0.1    1080">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用ss+proxychains翻越GFW">
-<meta property="og:url" content="https://masterizumi.github.io/2017/07/05/ss_proxychain_vs_GFW/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Izumi&#39;s Notepad">
+<meta property="og:url" content="https://masterizumi.github.io/page/2/index.html">
 <meta property="og:site_name" content="Izumi&#39;s Notepad">
-<meta property="og:description" content="× 环境Ubuntu 14.04LTS 安装shadowsocks-qt5sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5   打开gui配置ss，使用购买的ss服务器配置计算机设置-网络-代理手动        127.0.0.1    1080">
-<meta property="og:updated_time" content="2017-07-05T13:37:18.365Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用ss+proxychains翻越GFW">
-<meta name="twitter:description" content="× 环境Ubuntu 14.04LTS 安装shadowsocks-qt5sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5   打开gui配置ss，使用购买的ss服务器配置计算机设置-网络-代理手动        127.0.0.1    1080">
+<meta name="twitter:title" content="Izumi&#39;s Notepad">
 
 
 
@@ -130,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://masterizumi.github.io/2017/07/05/ss_proxychain_vs_GFW/"/>
+  <link rel="canonical" href="https://masterizumi.github.io/page/2/"/>
 
 
 
 
 
-  <title>使用ss+proxychains翻越GFW | Izumi's Notepad</title>
+  <title>Izumi's Notepad</title>
   
 
 
@@ -161,7 +157,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -254,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -265,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/ss_proxychain_vs_GFW/">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/blog_on_github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Izumi">
@@ -282,7 +280,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用ss+proxychains翻越GFW</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/blog_on_github/" itemprop="url">Create your own webpage on GitHub</a></h1>
         
 
         <div class="post-meta">
@@ -329,7 +329,138 @@
       
 
       
-        <p>× 环境Ubuntu 14.04LTS</p>
+        
+          
+            <p>This is a tutorial of creating a blog on github.io using Hexo.  </p>
+<ul>
+<li>Environment: Ubuntu 14.04  </li>
+</ul>
+<h1 id="Install-Nodejs"><a href="#Install-Nodejs" class="headerlink" title="Install Nodejs"></a>Install Nodejs</h1><p>Nodejs is a js framework, we can install it by apt-get.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install nodejs  </div><div class="line">sudo apt-get install nodejs-legacy  </div><div class="line">sudo apt-get install npm</div></pre></td></tr></table></figure>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><p>Build a folder for blog<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir blog</div></pre></td></tr></table></figure></p>
+<p>Initialize hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init ~/blog</div></pre></td></tr></table></figure></p>
+<p>Commands<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g    # generate webpage</div><div class="line">hexo s    # run local server</div></pre></td></tr></table></figure></p>
+<p>You can test your local server by opening <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>.</p>
+<h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><p>Let’s try <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">next</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
+<p>Change the theme option to next in _config.yml, and update it by:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd themes/next</div><div class="line">git pull</div><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure></p>
+<h1 id="Deploy-the-webpage-on-GitHub"><a href="#Deploy-the-webpage-on-GitHub" class="headerlink" title="Deploy the webpage on GitHub"></a>Deploy the webpage on GitHub</h1><p>Login your GitHub and create a new repository, the name should be “yourname.github.io”.  </p>
+<p>Install deployer:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-get --save</div></pre></td></tr></table></figure></p>
+<p>Edit _config.yml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/yourname/yourname.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>Finally, you can deploy your webpage:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><a href="http://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="external">http://www.jianshu.com/p/e99ed60390a8</a><br><a href="http://www.jianshu.com/p/a0a27d840992" target="_blank" rel="external">http://www.jianshu.com/p/a0a27d840992</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/ss_proxychain_vs_GFW/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Izumi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/ss_proxychain_vs_GFW/" itemprop="url">使用ss+proxychains翻越GFW</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>× 环境Ubuntu 14.04LTS</p>
 <h1 id="安装shadowsocks-qt5"><a href="#安装shadowsocks-qt5" class="headerlink" title="安装shadowsocks-qt5"></a>安装shadowsocks-qt5</h1><p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5  </p>
 <h1 id="打开gui配置ss，使用购买的ss服务器"><a href="#打开gui配置ss，使用购买的ss服务器" class="headerlink" title="打开gui配置ss，使用购买的ss服务器"></a>打开gui配置ss，使用购买的ss服务器</h1><h1 id="配置计算机"><a href="#配置计算机" class="headerlink" title="配置计算机"></a>配置计算机</h1><p>设置-网络-代理<br>手动        127.0.0.1    1080  //这里的1080是ss服务器的本地端口  </p>
 <p>此时，浏览器就可以正常跨越GFW了，但是终端是没法翻的,貌似是因为终端不走socks？终端不翻的话apt-get update根本没法正常更新啊。。  </p>
@@ -346,27 +477,20 @@
 </li>
 </ul>
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
@@ -374,42 +498,143 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" rel="next" title="解决NVIDIA显卡驱动安装后登录循环">
-                <i class="fa fa-chevron-left"></i> 解决NVIDIA显卡驱动安装后登录循环
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/05/blog_on_github/" rel="prev" title="Create your own webpage on GitHub">
-                Create your own webpage on GitHub <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://masterizumi.github.io/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Izumi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/izumi.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Izumi's Notepad">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" itemprop="url">解决NVIDIA显卡驱动安装后登录循环</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-05T21:31:57+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>Ubuntu 14.04 LTS<br>Dell Omen 2, i7-6700HQ, GTX960M  </p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
+<li>ctrl+alt+1  </li>
+<li>sudo service lightdm stop  </li>
+<li>sudo apt-get purge nvidia*  </li>
+<li>sudo apt-get install nvidia-367  </li>
+</ul>
+
+          
+        
       
     </div>
-  </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -417,10 +642,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -440,17 +661,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/izumi.jpg"
@@ -503,22 +715,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装shadowsocks-qt5"><span class="nav-number">1.</span> <span class="nav-text">安装shadowsocks-qt5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打开gui配置ss，使用购买的ss服务器"><span class="nav-number">2.</span> <span class="nav-text">打开gui配置ss，使用购买的ss服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置计算机"><span class="nav-number">3.</span> <span class="nav-text">配置计算机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装proxychains"><span class="nav-number">4.</span> <span class="nav-text">安装proxychains</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置proxychains"><span class="nav-number">5.</span> <span class="nav-text">配置proxychains</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重新打开终端，需要走代理时就加上proxychains命令，例如"><span class="nav-number">6.</span> <span class="nav-text">重新打开终端，需要走代理时就加上proxychains命令，例如</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -632,10 +828,10 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 
