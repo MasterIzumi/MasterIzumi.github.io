@@ -61,7 +61,7 @@
   </div>
 
   <script>
-        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var imgUrls = "css/images/snow.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
         var random = Math.floor((Math.random() * imgUrls.length ));
         if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
           document.getElementById("originBg").src=imgUrls[random];
@@ -175,6 +175,55 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-Notations_for_installing_opencv3_1_0"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/07/05/Notations_for_installing_opencv3_1_0/" class="article-date">
+	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Installing-Dependencies"><a href="#Installing-Dependencies" class="headerlink" title="Installing Dependencies"></a>Installing Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[compiler] sudo apt-get install build-essential  </div><div class="line">[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  </div><div class="line">[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</div></pre></td></tr></table></figure>
+<h1 id="Getting-Source-Code"><a href="#Getting-Source-Code" class="headerlink" title="Getting Source Code"></a>Getting Source Code</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~/&lt;my_working_directory&gt;  </div><div class="line">git clone https://github.com/Itseez/opencv.git  </div><div class="line">git clone https://github.com/Itseez/opencv_contrib.git</div></pre></td></tr></table></figure>
+<p>Then, checkout to version 3.1.0.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 3.1.0</div></pre></td></tr></table></figure>
+<p>Both opencv and opencv_contrib must <strong>be synchronized</strong>.</p>
+<h1 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h1><p>Using the following command to build with modules from opencv_contrib and avoid some bugs.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/Toolsets/opencv_contrib/modules -D WITH_LIBV4L=ON -D WITH_V4L=OFF -D BUILD_EXAMPLES=ON ..</div></pre></td></tr></table></figure></p>
+<h1 id="Epilogue"><a href="#Epilogue" class="headerlink" title="Epilogue"></a>Epilogue</h1><p>There are many errors when I was building OpenCV 3.1.0. It seems that all the errors are from opencv_contrib. You can search these errors in google, and nearly all of them are issued in github. Thus, you can lookup the issues and find the changes of the code in corresponding commits.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-QCA6174Driver_installation"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -215,55 +264,6 @@
 <blockquote>
 <p>592g网卡是QCA6174，ubuntu带的驱动有问题。<br>下载这个文件 <a href="http://pan.baidu.com/s/1c1H5Hz6" target="_blank" rel="external">http://pan.baidu.com/s/1c1H5Hz6</a> 提取码：dsp5。<br>解压出来的QCA6174文件夹在root权限下放在/lib/firmware/ath10k/文件夹里，bin文件权限改成755。然后重载驱动，重启<br>给bin文件加上x属性 命令是sudo chmod 755 *.bin 用以下两个命令重载网卡驱动： sudo rmmod ath10k_pci sudo modprobe -v ath10k_pci 重启  </p>
 </blockquote>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Notations_for_installing_opencv3_1_0"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/05/Notations_for_installing_opencv3_1_0/" class="article-date">
-	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Installing-Dependencies"><a href="#Installing-Dependencies" class="headerlink" title="Installing Dependencies"></a>Installing Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[compiler] sudo apt-get install build-essential  </div><div class="line">[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev  </div><div class="line">[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</div></pre></td></tr></table></figure>
-<h1 id="Getting-Source-Code"><a href="#Getting-Source-Code" class="headerlink" title="Getting Source Code"></a>Getting Source Code</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd ~/&lt;my_working_directory&gt;  </div><div class="line">git clone https://github.com/Itseez/opencv.git  </div><div class="line">git clone https://github.com/Itseez/opencv_contrib.git</div></pre></td></tr></table></figure>
-<p>Then, checkout to version 3.1.0.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout 3.1.0</div></pre></td></tr></table></figure>
-<p>Both opencv and opencv_contrib must <strong>be synchronized</strong>.</p>
-<h1 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h1><p>Using the following command to build with modules from opencv_contrib and avoid some bugs.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/Toolsets/opencv_contrib/modules -D WITH_LIBV4L=ON -D WITH_V4L=OFF -D BUILD_EXAMPLES=ON ..</div></pre></td></tr></table></figure></p>
-<h1 id="Epilogue"><a href="#Epilogue" class="headerlink" title="Epilogue"></a>Epilogue</h1><p>There are many errors when I was building OpenCV 3.1.0. It seems that all the errors are from opencv_contrib. You can search these errors in google, and nearly all of them are issued in github. Thus, you can lookup the issues and find the changes of the code in corresponding commits.</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html</p>
 
       
     </div>
@@ -493,7 +493,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/QCA6174Driver_installation/">Install driver for QCA6174 Wi-Fi Driver</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a></h6>
               <span>July 5, 2017</span>
             </div>
 
@@ -505,7 +505,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/QCA6174Driver_installation/">Install driver for QCA6174 Wi-Fi Driver</a></h6>
               <span>July 5, 2017</span>
             </div>
 
@@ -541,7 +541,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/solve_cannot_find_libs/">Solve &quot;cannot open shared object file xxx&quot;</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">解决NVIDIA显卡驱动安装后登录循环</a></h6>
               <span>July 5, 2017</span>
             </div>
 
