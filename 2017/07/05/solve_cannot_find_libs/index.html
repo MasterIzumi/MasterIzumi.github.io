@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://masterizumi.github.io/2017/07/05/solve_cannot_find_libs/index.html">
 <meta property="og:site_name" content="Izumi&#39;s Notepad">
 <meta property="og:description" content="问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib">
-<meta property="og:updated_time" content="2017-07-05T13:36:56.441Z">
+<meta property="og:updated_time" content="2018-01-04T09:10:39.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Solve &quot;cannot open shared object file xxx&quot;">
 <meta name="twitter:description" content="问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory 这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib">
@@ -154,6 +154,7 @@
       
         <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
 <p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
+<a id="more"></a>
 <h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
 <p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
 <p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
@@ -203,19 +204,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/05/blog_on_github/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/05/cartographer_installation/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Create your own webpage on GitHub
+          Cartographer Installation
         
       </div>
     </a>
   
   
-    <a href="/2017/07/05/ss_proxychain_vs_GFW/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用ss+proxychains翻越GFW</div>
+      <div class="article-nav-title">解决NVIDIA显卡驱动安装后登录循环</div>
     </a>
   
 </nav>

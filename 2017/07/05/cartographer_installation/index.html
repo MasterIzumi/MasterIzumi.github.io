@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://masterizumi.github.io/2017/07/05/cartographer_installation/index.html">
 <meta property="og:site_name" content="Izumi&#39;s Notepad">
 <meta property="og:description" content="Dependencies1sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-com">
-<meta property="og:updated_time" content="2017-07-05T13:35:50.104Z">
+<meta property="og:updated_time" content="2018-01-04T09:10:26.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cartographer Installation">
 <meta name="twitter:description" content="Dependencies1sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-com">
@@ -153,6 +153,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install -y google-mock libboost-all-dev  libeigen3-dev libgflags-dev libgoogle-glog-dev liblua5.2-dev libprotobuf-dev  libsuitesparse-dev libwebp-dev ninja-build protobuf-compiler python-sphinx  ros-indigo-tf2-eigen libatlas-base-dev libsuitesparse-dev liblapack-dev</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h1 id="Ceres-solver"><a href="#Ceres-solver" class="headerlink" title="Ceres solver"></a>Ceres solver</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/ceres-solver-1.11.0.git  </div><div class="line">cd ceres-solver-1.11.0/build  </div><div class="line">cmake ..  </div><div class="line">make –j  </div><div class="line">sudo make install</div></pre></td></tr></table></figure>
 <h1 id="Cartographer"><a href="#Cartographer" class="headerlink" title="Cartographer"></a>Cartographer</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/hitcm/cartographer.git  </div><div class="line">cd cartographer/build  </div><div class="line">cmake .. -G Ninja  </div><div class="line">ninja  </div><div class="line">ninja test  </div><div class="line">sudo ninja install</div></pre></td></tr></table></figure>
 <h1 id="cartographer-ros"><a href="#cartographer-ros" class="headerlink" title="cartographer_ros"></a>cartographer_ros</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd ~/catkin_ws/src  </div><div class="line">git clone https://github.com/hitcm/cartographer_ros.git  </div><div class="line">cd ..  </div><div class="line">catkin_make</div></pre></td></tr></table></figure>
@@ -197,19 +198,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/05/Notations_for_installing_opencv3_1_0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/05/blog_on_github/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Notations for installing OpenCV 3.1.0
+          Create your own webpage on GitHub
         
       </div>
     </a>
   
   
-    <a href="/2017/07/05/blog_on_github/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/07/05/solve_cannot_find_libs/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Create your own webpage on GitHub</div>
+      <div class="article-nav-title">Solve &quot;cannot open shared object file xxx&quot;</div>
     </a>
   
 </nav>

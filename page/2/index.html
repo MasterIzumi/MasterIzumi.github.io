@@ -146,76 +146,18 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在运行使用g2o库的程序时，出现如下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory</div></pre></td></tr></table></figure></p>
-<p>这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  </p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>创建一个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo vim /etc/ld.so.conf.d/g2o.conf</div></pre></td></tr></table></figure></p>
-<p>只用输入一行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib</div></pre></td></tr></table></figure></p>
-<p>保存，退出。运行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ldconfig -v</div></pre></td></tr></table></figure></p>
-<p>搞定。再运行程序时，就可以找到这个.so了。  </p>
-<p>如果不知道在那里找.so文件，可以使用find指令，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find /usr/ -name libg2o_core.so -print</div></pre></td></tr></table></figure></p>
-<p>如果该文件在/usr下，则会显示出其路径位置。</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li><a href="http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f" target="_blank" rel="external">http://stackoverflow.com/questions/12335848/opencv-program-compile-error-libopencv-core-so-2-4-cannot-open-shared-object-f</a>  </li>
-<li><a href="http://www.cnblogs.com/Anker/p/3209876.html" target="_blank" rel="external">http://www.cnblogs.com/Anker/p/3209876.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-ss_proxychain_vs_GFW"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/05/ss_proxychain_vs_GFW/">使用ss+proxychains翻越GFW</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/05/ss_proxychain_vs_GFW/" class="article-date">
-	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
-	</a>
+          
+          <div class="entry-summary">
+          问题描述在运行使用g2o库的程序时，出现如下错误1$ error while loading shared libraries: libg2o_core.so: cannot open shared object file: No such file or directory
+这个错误的意思是找不到libg2o_core.so这个共享库，实际上在安装g2o时将文件放在了/usr/local/lib下。但是由于没有配置参数，系统没法到这个目录下查找，所以在运行时报错。  
 
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>× 环境Ubuntu 14.04LTS</p>
-<h1 id="安装shadowsocks-qt5"><a href="#安装shadowsocks-qt5" class="headerlink" title="安装shadowsocks-qt5"></a>安装shadowsocks-qt5</h1><p>sudo add-apt-repository ppa:hzwhuang/ss-qt5<br>sudo apt-get update<br>sudo apt-get install shadowsocks-qt5  </p>
-<h1 id="打开gui配置ss，使用购买的ss服务器"><a href="#打开gui配置ss，使用购买的ss服务器" class="headerlink" title="打开gui配置ss，使用购买的ss服务器"></a>打开gui配置ss，使用购买的ss服务器</h1><h1 id="配置计算机"><a href="#配置计算机" class="headerlink" title="配置计算机"></a>配置计算机</h1><p>设置-网络-代理<br>手动        127.0.0.1    1080  //这里的1080是ss服务器的本地端口  </p>
-<p>此时，浏览器就可以正常跨越GFW了，但是终端是没法翻的,貌似是因为终端不走socks？终端不翻的话apt-get update根本没法正常更新啊。。  </p>
-<p>或者，使用火狐的foxyproxy插件对代理进行配置，以实现较为方便的切换。</p>
-<h1 id="安装proxychains"><a href="#安装proxychains" class="headerlink" title="安装proxychains"></a>安装proxychains</h1><p>sudo apt-get install proxychains  </p>
-<h1 id="配置proxychains"><a href="#配置proxychains" class="headerlink" title="配置proxychains"></a>配置proxychains</h1><p>sudo vim /etc/proxychains.conf<br>将最后一行的 socks4 xxxx<br>改成 socks5 127.0.0.1 1080  //这里的信息也是ss服务器的本地端口  </p>
-<h1 id="重新打开终端，需要走代理时就加上proxychains命令，例如"><a href="#重新打开终端，需要走代理时就加上proxychains命令，例如" class="headerlink" title="重新打开终端，需要走代理时就加上proxychains命令，例如"></a>重新打开终端，需要走代理时就加上proxychains命令，例如</h1><p>sudo proxychains apt-get update<br>此处可以使用 proxychains curl ip.gs查看本机地址，正常的话应该在境外。<br>也可使用proxychains curl google.com看网络是否连通。  </p>
-<ul>
-<li><p>若提示<br>ERROR: ld.so: object ‘libproxychains.so.3’ from LD_PRELOAD cannot be preloaded: ignored.<br>说明proxychains找不到对应的配置文件，修改路径即可。<br>在终端里使用find命令<br>find /usr/lib/ -name libproxychains.so.3 -print<br>会打印出libproxychains.so.3的路径<br>然后 sudo vim /usr/bin/proxychains<br>修改里面的LD_PRELOAD参数为上面打印出来的路径即可。  </p>
-</li>
-<li><p>可能在5,6步中间需要重启一下系统。  </p>
-</li>
-<li><p>由于没有配置PAC模式，所以跨越GFW时，需要先打开ss，然后修改系统网络代理。不需要代理时，需要改回原来的配置。（摊手  </p>
-</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/07/05/solve_cannot_find_libs/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -256,14 +198,75 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>Ubuntu 14.04 LTS<br>Dell Omen 2, i7-6700HQ, GTX960M  </p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
-<li>ctrl+alt+1  </li>
-<li>sudo service lightdm stop  </li>
-<li>sudo apt-get purge nvidia*  </li>
-<li>sudo apt-get install nvidia-367  </li>
-</ul>
+        
 
+          
+          <div class="entry-summary">
+          环境Ubuntu 14.04 LTSDell Omen 2, i7-6700HQ, GTX960M  
+步骤
+ctrl+alt+1  
+sudo service lightdm stop  
+sudo apt-get purge nvidia*  
+sudo apt-get install nvidia-367  
+
+
+        
+          <p class="article-more-link">
+            <a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/#more">Continue Reading →</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-ss_proxychain_vs_GFW"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/05/ss_proxychain_vs_GFW/">使用ss+proxychains翻越GFW</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/07/05/ss_proxychain_vs_GFW/" class="article-date">
+	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+          <div class="entry-summary">
+          × 环境Ubuntu 14.04LTS
+安装shadowsocks-qt5sudo add-apt-repository ppa:hzwhuang/ss-qt5sudo apt-get updatesudo apt-get install shadowsocks-qt5  
+
+        
+          <p class="article-more-link">
+            <a href="/2017/07/05/ss_proxychain_vs_GFW/#more">Continue Reading →</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -372,25 +375,13 @@
 
             
               <div class="widget-entry-thumbnail">
-                <a href="/2017/10/09/loam_velodyne_for_hdl32e/" title=""><img width="50" height="50" src="http://wiki.ros.org/loam_velodyne?action=AttachFile&amp;do=get&amp;target=maps.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+                <a href="/2017/10/09/loam_velodyne_for_hdl32e/" title=""><img width="50" height="50" src="gallery/hdl-32e.png" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
             
 
               <h6 style="margin: 0;"><a href="/2017/10/09/loam_velodyne_for_hdl32e/">修改loam_velodyne使其能够兼容HDL-32E</a></h6>
               <span>October 9, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/07/05/QCA6174Driver_installation/">Install driver for QCA6174 Wi-Fi Driver</a></h6>
-              <span>July 5, 2017</span>
             </div>
 
           </li>
@@ -413,7 +404,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/cartographer_installation/">Cartographer Installation</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/QCA6174Driver_installation/">Install driver for QCA6174 Wi-Fi Driver</a></h6>
               <span>July 5, 2017</span>
             </div>
 
@@ -426,6 +417,18 @@
             
 
               <h6 style="margin: 0;"><a href="/2017/07/05/blog_on_github/">Create your own webpage on GitHub</a></h6>
+              <span>July 5, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/07/05/cartographer_installation/">Cartographer Installation</a></h6>
               <span>July 5, 2017</span>
             </div>
 
