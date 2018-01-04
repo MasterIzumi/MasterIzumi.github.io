@@ -61,7 +61,7 @@
   </div>
 
   <script>
-        var imgUrls = "css/images/snow.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var imgUrls = "css/images/snow.jpg".split(",");
         var random = Math.floor((Math.random() * imgUrls.length ));
         if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
           document.getElementById("originBg").src=imgUrls[random];
@@ -120,54 +120,6 @@
       <div id="content" class="outer">
         
           <section id="main">
-  
-    <article id="post-ubuntu_NVIDIA_driver_login_loop"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">解决NVIDIA显卡驱动安装后登录循环</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" class="article-date">
-	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
-	</a>
-
-       
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>Ubuntu 14.04 LTS<br>Dell Omen 2, i7-6700HQ, GTX960M  </p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
-<li>ctrl+alt+1  </li>
-<li>sudo service lightdm stop  </li>
-<li>sudo apt-get purge nvidia*  </li>
-<li>sudo apt-get install nvidia-367  </li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-      
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
   
     <article id="post-solve_cannot_find_libs"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
@@ -279,6 +231,54 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-ubuntu_NVIDIA_driver_login_loop"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">解决NVIDIA显卡驱动安装后登录循环</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/" class="article-date">
+	  <time datetime="2017-07-05T13:31:57.000Z" itemprop="datePublished">July 5, 2017</time>
+	</a>
+
+       
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>Ubuntu 14.04 LTS<br>Dell Omen 2, i7-6700HQ, GTX960M  </p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ul>
+<li>ctrl+alt+1  </li>
+<li>sudo service lightdm stop  </li>
+<li>sudo apt-get purge nvidia*  </li>
+<li>sudo apt-get install nvidia-367  </li>
+</ul>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
 
 
   <nav id="page-nav">
@@ -371,23 +371,14 @@
           <li class="clearfix">
 
             
-              <div class="widget-entry-summary" style="margin: 0;">
+              <div class="widget-entry-thumbnail">
+                <a href="/2017/10/09/loam_velodyne_for_hdl32e/" title=""><img width="50" height="50" src="http://wiki.ros.org/loam_velodyne?action=AttachFile&amp;do=get&amp;target=maps.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+              </div>
+              <div class="widget-entry-summary">
             
 
               <h6 style="margin: 0;"><a href="/2017/10/09/loam_velodyne_for_hdl32e/">修改loam_velodyne使其能够兼容HDL-32E</a></h6>
               <span>October 9, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a></h6>
-              <span>July 5, 2017</span>
             </div>
 
           </li>
@@ -410,7 +401,7 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/blog_on_github/">Create your own webpage on GitHub</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/Notations_for_installing_opencv3_1_0/">Notations for installing OpenCV 3.1.0</a></h6>
               <span>July 5, 2017</span>
             </div>
 
@@ -434,7 +425,19 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/07/05/ubuntu_NVIDIA_driver_login_loop/">解决NVIDIA显卡驱动安装后登录循环</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/07/05/blog_on_github/">Create your own webpage on GitHub</a></h6>
+              <span>July 5, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/07/05/solve_cannot_find_libs/">Solve &quot;cannot open shared object file xxx&quot;</a></h6>
               <span>July 5, 2017</span>
             </div>
 
