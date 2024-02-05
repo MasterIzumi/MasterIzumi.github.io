@@ -21,7 +21,7 @@ I'm a Ph.D. candidate at the [Aerial Robotics Group](https://uav.hkust.edu.hk/),
 
 
 # News
-- *2024.02*: Code for **SIMPL** has been released, please check [link](https://github.com/HKUST-Aerial-Robotics/SIMPL).
+- *2024.02*: Code for **SIMPL** has been released, please check this [link](https://github.com/HKUST-Aerial-Robotics/SIMPL).
 
 # Publications 
 
