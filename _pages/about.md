@@ -142,11 +142,11 @@ Wenchao Ding\*, **Lu Zhang**\*, Jing Chen and Shaojie Shen
 - *2011.09 - 2015.06*, Bachelor of Engineering, Automation, Beijing Institute of Technology, Beijing, China
 
 # Academic Services
-## Journal Reviewer 
+### Journal Reviewer 
 - IEEE Transactions on Robotics (T-RO)
 - IEEE Transactions on Intelligent Vehicles (T-IV)
 
-## Conference Reviewer
+### Conference Reviewer
 - IEEE International Conference on Robotics and Automation (ICRA)
 - IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
 - Conference on Robot Learning (CoRL)
