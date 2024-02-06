@@ -34,7 +34,7 @@ I'm a Ph.D. candidate at the [Aerial Robotics Group](https://uav.hkust.edu.hk/),
 
 *In submission*, 2023
 
-<img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/todo)
+<img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2402.02519)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/_8-6ccopZMM)
 <img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/SIMPL)
 
