@@ -90,7 +90,7 @@ Wenchao Ding\*, **Lu Zhang**\*, Jing Chen and Shaojie Shen
 <img src="images/misc/logo_ieee.png" width="32px" /> [IEEE](https://ieeexplore.ieee.org/document/9526613)
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2108.07993)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/3i0cIQrZs-4)
-<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/EPSILON)
+<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/EPSILON) ![](https://img.shields.io/github/stars/HKUST-Aerial-Robotics/EPSILON?style=flat)
 
 </div>
 </div>
@@ -110,7 +110,7 @@ Wenchao Ding\*, **Lu Zhang**\*, Jing Chen and Shaojie Shen
 <img src="images/misc/logo_ieee.png" width="32px" /> [IEEE](https://ieeexplore.ieee.org/document/9197302)
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2003.02746)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/gEZ4dAgHktQ)
-<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/eudm_planner)
+<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/eudm_planner) ![](https://img.shields.io/github/stars/HKUST-Aerial-Robotics/eudm_planner?style=flat)
 
 </div>
 </div>
@@ -130,7 +130,7 @@ Wenchao Ding\*, **Lu Zhang**\*, Jing Chen and Shaojie Shen
 <img src="images/misc/logo_ieee.png" width="32px" /> [IEEE](https://ieeexplore.ieee.org/document/8740885)
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/1906.09788)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/LrGmKaM3Iqc)
-<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/spatiotemporal_semantic_corridor)
+<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/spatiotemporal_semantic_corridor) ![](https://img.shields.io/github/stars/HKUST-Aerial-Robotics/spatiotemporal_semantic_corridor?style=flat)
 
 </div>
 </div>
