@@ -36,7 +36,7 @@ I'm a Ph.D. candidate at the [Aerial Robotics Group](https://uav.hkust.edu.hk/),
 
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2402.02519)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/_8-6ccopZMM)
-<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/SIMPL)
+<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/SIMPL) ![](https://img.shields.io/github/stars/HKUST-Aerial-Robotics/SIMPL?style=flat)
 
 </div>
 </div>
@@ -71,7 +71,7 @@ Tong Li, **Lu Zhang**, Sikang Liu and Shaojie Shen
 <img src="images/misc/logo_ieee.png" width="32px" /> [IEEE](https://ieeexplore.ieee.org/document/9981923)
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2111.01592)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/AifLEhVQXjo)
-<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/DSP)
+<img src="images/misc/logo_github.png" width="24px" /> [code](https://github.com/HKUST-Aerial-Robotics/DSP) ![](https://img.shields.io/github/stars/HKUST-Aerial-Robotics/DSP?style=flat)
 
 </div>
 </div>
