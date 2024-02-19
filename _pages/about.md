@@ -20,18 +20,19 @@ I'm a Ph.D. candidate at the [Aerial Robotics Group](https://uav.hkust.edu.hk/),
 
 
 # News
+- *2024.02*: Our paper, *SIMPL: A Simple and Efficient Multi-agent Motion Prediction Baseline for Autonomous Driving*, has been accepted by IEEE Robotics and Automation Letters (RA-L).
 - *2024.02*: Code for **SIMPL** has been released, please check this [link](https://github.com/HKUST-Aerial-Robotics/SIMPL).
 
-# Publications 
+# Selected Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/pub/pub_6_simpl.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RA-L 2024</div><img src='images/pub/pub_6_simpl.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **SIMPL: A Simple and Efficient Multi-agent Motion Prediction Baseline for Autonomous Driving**
 
 **Lu Zhang**, Peiliang Li, Sikang Liu and Shaojie Shen
 
-*In submission*, 2023
+*IEEE Robotics and Automation Letters (RA-L)*, 2024
 
 <img src="images/misc/logo_arxiv.png" width="32px" /> [arXiv](https://arxiv.org/abs/2402.02519)
 <img src="images/misc/logo_youtube.png" width="28px" /> [video](https://youtu.be/_8-6ccopZMM)
@@ -144,6 +145,7 @@ Wenchao Ding\*, **Lu Zhang**\*, Jing Chen and Shaojie Shen
 ### Journal Reviewer 
 - IEEE Transactions on Robotics (T-RO)
 - IEEE Transactions on Intelligent Vehicles (T-IV)
+- IEEE Transactions on Intelligent Transportation Systems (T-ITS)
 
 ### Conference Reviewer
 - IEEE International Conference on Robotics and Automation (ICRA)
