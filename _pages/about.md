@@ -20,6 +20,7 @@ I'm a Ph.D. candidate at the [Aerial Robotics Group](https://uav.hkust.edu.hk/),
 
 
 # News
+- *2024.05*: I have successfully defended my Ph.D. thesis! A big thank you to everyone for your support!
 - *2024.02*: Our paper, *SIMPL: A Simple and Efficient Multi-agent Motion Prediction Baseline for Autonomous Driving*, has been accepted by IEEE Robotics and Automation Letters (RA-L).
 - *2024.02*: Code for **SIMPL** has been released, please check this [link](https://github.com/HKUST-Aerial-Robotics/SIMPL).
 
